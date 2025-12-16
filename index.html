@@ -6,47 +6,142 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jubiel Burias - Personal Bibliography</title>
 
-<div class="container">
-  <h1>My Personal Bibliography</h1>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 
-  <section>
-    <h2>Basic Information</h2>
-    <img src="profile.jpg" class="profile">
-    <p><b>Name:</b> Your Name</p>
-    <p><b>Age:</b> 18</p>
-    <p><b>Birthday:</b> June 29, 2007</p>
-    <p><b>Contact:</b> jburias56271@liceo.edu.ph</p>
-  </section>
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #0a0a0a;
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
 
-  <section>
-    <h2>Hobbies</h2>
-    <ul>
-      <li>Sewing</li>
-      <li>Thrifting</li>
-      <li>Print shirt design</li>
-    </ul>
-  </section>
+    h1, h2, h3 {
+      font-family: 'Bebas Neue', cursive;
+      letter-spacing: 2px;
+    }
 
-  <section>
-    <h2>Talents / Skills</h2>
-    <ul>
-      <li>I can work with consistency</li>
-      <li>Basic HTML & CSS</li>
-      <li>Teamwork</li>
-    </ul>
-  </section>
+    .neon {
+      color: #fff;
+      text-shadow:
+        0 0 5px #ff00ff,
+        0 0 10px #ff00ff,
+        0 0 20px #ff00ff,
+        0 0 40px #ff00ff;
+      text-align: center;
+    }
 
-  <section>
-    <h2>Interesting Facts</h2>
-    <p>I enjoy customizing thrifted clothes and turning them into unique pieces.</p>
-  </section>
+    .container {
+      width: 90%;
+      max-width: 600px;
+      margin: 0 auto;
+      padding-bottom: 50px;
+    }
 
-  <section>
-    <h2>Social Media</h2>
-    <a href="https://www.facebook.com/Jubielpedroso2007" target="_blank">Facebook</a>
+    section {
+      margin: 40px 0;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: rgba(0,0,0,0.7);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
 
-</div>
+    .profile {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      display: block;
+      margin: 10px auto;
+    }
+
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+
+    a {
+      color: #ff00ff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    a:hover {
+      color: #00ffff;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="neon">My Personal Bibliography</h1>
+
+    <section>
+      <h2>Basic Information</h2>
+      <img src="images/profile.jpg" class="profile" alt="My Photo">
+      <p><strong>Name:</strong> Jubiel G. Burias</p>
+      <p><strong>Age:</strong> 18</p>
+      <p><strong>Birthday:</strong> June 29, 2007</p>
+    </section>
+
+    <section>
+      <h2>Hobbies</h2>
+      <ul>
+        <li>Cycling</li>
+        <li>Thrifting</li>
+        <li>Sewing 🪡</li>
+        <li>Making prints on shirts</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Talents / Skills</h2>
+      <ul>
+        <li>Sewing and garment customization</li>
+        <li>T-shirt printing and design</li>
+        <li>Creative fashion styling</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Interesting Facts</h2>
+      <p>I enjoy turning thrifted clothes into unique pieces and creating my own printed shirt designs.</p>
+    </section>
+
+    <section>
+      <h2>Social Media</h2>
+      <a href="https://www.facebook.com/Jubielpedroso2007" target="_blank">Visit my Facebook Profile</a>
+    </section>
+  </div>
+
+  <script>
+    // Scroll fade-in animation
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
 
 </body>
 </html>
