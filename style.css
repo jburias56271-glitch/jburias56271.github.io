@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(270deg, #000000, #1a1a1a, #0f0f0f);
+  background-size: 400% 400%;
+  animation: bg 12s ease infinite;
+  color: white;
+}
+
+@keyframes bg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 30px;
+}
+
+h1, h2 {
+  color: #00ffcc;
+}
+
+.profile {
+  width: 150px;
+  border-radius: 50%;
+  margin: 10px 0;
+}
+
+section {
+  margin-bottom: 30px;
+}
